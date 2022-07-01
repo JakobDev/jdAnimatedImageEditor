@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop">
+  <!--Created with jdAppdataEdit 3.3-->
+  <id>com.gitlab.JakobDev.jdAnimatedImageEditor</id>
+  <name>jdAnimatedImageEditor</name>
+  <summary>A simple program for creating animated Images</summary>
+  <summary xml:lang="de">Ein einfaches Programm zum erstellen von animierten Bildern</summary>
+  <developer_name>JakobDev</developer_name>
+  <launchable type="desktop-id">com.gitlab.JakobDev.jdAnimatedImageEditor.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <description>
+    <p>jdAnimatedImageEditor is a simple Programm that lets you create and edit animated Images. It supports GIF and APNG. Import and export of Videos is also supported.</p>
+    <p xml:lang="de">jdAnimatedImageEditor ist ein einfaches Programm mit dem animierte Bilder erstellt und bearbeiten werden können. Es unterstützt GIF und APNG. Das importieren und exportieren von Videos wird auch unterstützt.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/raw/1.0/Screenshots/MainWindow.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.0" date="2022-07-01" type="stable">
+      <description>
+        <ul>
+          <li>First Release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://gitlab.com/JakobDev/jdAnimatedImageEditor</url>
+  <url type="bugtracker">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/issues</url>
+  <categories>
+    <category>Graphics</category>
+    <category>Qt</category>
+  </categories>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <provides>
+    <binary>jdanimatedimageeditor</binary>
+    <python3>jdAnimatedImageEditor</python3>
+    <mediatype>image/gif</mediatype>
+    <mediatype>image/png</mediatype>
+  </provides>
+</component>

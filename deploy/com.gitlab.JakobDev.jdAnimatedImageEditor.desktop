@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=jdAnimatedImageEditor
+Terminal=false
+Type=Application
+Icon=com.gitlab.JakobDev.jdAnimatedImageEditor
+Exec=jdanimatedimageeditor %f
+Comment=A simple program for creating animated Images
+Comment[de]=Ein einfaches Programm zum erstellen von animierten Bildern
+Categories=Graphics;Qt;
+MimeType=image/gif;image/png;
