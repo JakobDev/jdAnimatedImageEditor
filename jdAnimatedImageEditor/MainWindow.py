@@ -136,8 +136,6 @@ class MainWindow(QMainWindow):
         if not self._ask_for_save():
             return
 
-        self._env.add_to_recent_files(action.data())
-        self._update_recent_files_menu()
         self.open_file(action.data())
 
     def _clear_recent_files(self):
@@ -151,8 +149,6 @@ class MainWindow(QMainWindow):
 
         path = QFileDialog.getOpenFileName(self)[0]
         if path != "":
-            self._env.add_to_recent_files(path)
-            self._update_recent_files_menu()
             self.open_file(path)
 
     def open_file(self, path: str) -> bool:
@@ -180,6 +176,9 @@ class MainWindow(QMainWindow):
         self.set_modified(False)
         self._update_preview()
 
+        self._env.add_to_recent_files(path)
+        self._update_recent_files_menu()
+
     def _save_with_dialog(self):
         format_list = [["GIF", [".gif"]], ["APNG", [".png", ".apng"]]]
         path = QFileDialog.getSaveFileName(self, filter=get_qt_file_filter(format_list))[0]
@@ -188,7 +187,10 @@ class MainWindow(QMainWindow):
             self.save_file(path)
 
     def _save_action_clicked(self):
-        self.save_file("Test.gif", "GIF")
+        if self._current_path is None:
+            self._save_with_dialog()
+        else:
+            self.save_file(self._current_path)
 
     def save_file(self, path: str, file_format: Optional[str] = None, set_modified: bool = True) -> None:
         if not file_format:
@@ -207,6 +209,8 @@ class MainWindow(QMainWindow):
         if set_modified:
             self._current_path = path
             self.set_modified(False)
+            self._env.add_to_recent_files(path)
+            self._update_recent_files_menu()
 
     def _check_ffmpeg_installed(self) -> bool:
         if self._env.ffmpeg_handler.is_ffmpeg_installed():
