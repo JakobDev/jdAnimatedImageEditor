@@ -49,6 +49,7 @@ class MainWindow(QMainWindow):
         self._reset_all()
         self._update_preview()
         self._update_recent_files_menu()
+        self._update_save_actions_enabled()
 
         self.image_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
 
@@ -86,6 +87,12 @@ class MainWindow(QMainWindow):
         if self._modified and self._env.settings.get("windowTitleFileModified"):
             self.setWindowTitle("*" + self.windowTitle())
 
+    def _update_save_actions_enabled(self):
+        enabled = self.image_table.rowCount() > 0
+        self.save_action.setEnabled(enabled)
+        self.save_as_action.setEnabled(enabled)
+        self.export_video_action.setEnabled(enabled)
+
     def _ask_for_save(self) -> bool:
         if not self._modified:
             return True
@@ -105,7 +112,10 @@ class MainWindow(QMainWindow):
         self.width_spin_box.setValue(150)
         self.height_spin_box.setValue(150)
         self.duration_spin_box.setValue(1)
+
         self.set_modified(False)
+        self._update_preview()
+        self._update_save_actions_enabled()
 
     def _update_recent_files_menu(self):
         self.recent_files_menu.clear()
@@ -262,6 +272,10 @@ class MainWindow(QMainWindow):
         if path == "":
             return
 
+        if path.lower().split(".")[-1] in ["gif", "png", "apng"]:
+            QMessageBox.critical(self, QCoreApplication.translate("MainWindow", "Not a Video"),  QCoreApplication.translate("MainWindow", "This function is for exporting Videos, not Images. If you want to save as a Image, use File>Save."))
+            return
+
         temp_path = get_temp_path("jdAnimatedImageEditor_export_{{random}}.gif")
         self.save_file(temp_path, file_format="GIF", set_modified=False)
 
@@ -294,10 +308,14 @@ class MainWindow(QMainWindow):
             self.width_spin_box.setValue(label.get_image().size[0])
             self.height_spin_box.setValue(label.get_image().size[1])
 
+        self._update_save_actions_enabled()
+
     def _remove_frame_clicked(self):
         row = get_sender_table_row(self.image_table, 1, self.sender())
         self.image_table.removeRow(row)
         self.set_modified(True)
+
+        self._update_save_actions_enabled()
 
     def _export_frame_clicked(self):
         row = get_sender_table_row(self.image_table, 2, self.sender())

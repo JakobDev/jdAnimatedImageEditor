@@ -107,14 +107,14 @@ def get_qt_file_filter(file_formats: list, all_text: Optional[str] = None) -> st
     for file_format in file_formats:
         filter_string += file_format[0] + " ("
         for extension in file_format[1]:
-            filter_string += f"*{extension};"
+            filter_string += f"*{extension} "
             extension_list.append(extension)
         filter_string = filter_string[:-1] + ");;"
 
     if all_text:
         all_filter = all_text + " ("
         for extension in extension_list:
-            all_filter += f"*{extension};"
+            all_filter += f"*{extension} "
         filter_string = all_filter[:-1] + ");;" + filter_string
         filter_string += QCoreApplication.translate("Functions", "All Files") + " (*);;"
 
