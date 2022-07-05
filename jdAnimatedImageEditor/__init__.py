@@ -1,4 +1,4 @@
-from PyQt6.QtCore import QTranslator, QLocale
+from PyQt6.QtCore import QTranslator, QLocale, QLibraryInfo
 from PyQt6.QtWidgets import QApplication
 from .MainWindow import MainWindow
 from .Environment import Environment
@@ -16,16 +16,23 @@ def main():
     app.setApplicationName("jdAnimatedImageEditor")
     app.setWindowIcon(env.icon)
 
-    translator = QTranslator()
+    app_translator = QTranslator()
+    qt_translator = QTranslator()
+    app_trans_dir = os.path.join(env.program_dir, "translations")
+    qt_trans_dir = QLibraryInfo.path(QLibraryInfo.LibraryPath.TranslationsPath)
     language = env.settings.get("language")
     if language == "default":
         system_language = QLocale.system().name()
-        translator.load(
-            os.path.join(env.program_dir, "translations", "jdAnimatedImageEditor_" + system_language.split("_")[0] + ".qm"))
-        translator.load(os.path.join(env.program_dir, "translations", "jdAnimatedImageEditor_" + system_language + ".qm"))
+        app_translator.load(os.path.join(app_trans_dir, "jdAnimatedImageEditor_" + system_language.split("_")[0] + ".qm"))
+        app_translator.load(os.path.join(app_trans_dir, "jdAnimatedImageEditor_" + system_language + ".qm"))
+        qt_translator.load(os.path.join(qt_trans_dir, "qt_" + system_language.split("_")[0] + ".qm"))
+        qt_translator.load(os.path.join(qt_trans_dir, "qt_" + system_language + ".qm"))
     else:
-        translator.load(os.path.join(env.program_dir, "translations", "jdAnimatedImageEditor_" + language + ".qm"))
-    app.installTranslator(translator)
+        app_translator.load(os.path.join(app_trans_dir, "jdAnimatedImageEditor_" + language + ".qm"))
+        qt_translator.load(os.path.join(qt_trans_dir, "qt_" + language.split("_")[0] + ".qm"))
+        qt_translator.load(os.path.join(qt_trans_dir, "qt_" + language + ".qm"))
+    app.installTranslator(app_translator)
+    app.installTranslator(qt_translator)
 
     PIL.Image.preinit()
 
