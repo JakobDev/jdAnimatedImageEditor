@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <component type="desktop">
-  <!--Created with jdAppdataEdit 3.2-->
+  <!--Created with jdAppdataEdit 3.3-->
   <id>com.gitlab.JakobDev.jdAnimatedImageEditor</id>
   <name>jdAnimatedImageEditor</name>
   <summary>A simple program for creating animated Images</summary>
@@ -21,14 +21,21 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.1" date="2022-07-03" type="stable">
+    <release version="1.2" date="2022-07-05" type="stable">
       <description>
+        <ul>
+          <li>Add Swedish translation</li>
+          <li>Bugfixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1" date="2022-07-02" type="stable"><description>
         <ul>
           <li>Bugfixes</li>
         </ul>
       </description>
     </release>
-    <release version="1.0" date="2022-07-01" type="stable"><description>
+    <release version="1.0" date="2022-06-30" type="stable"><description>
         <ul>
           <li>First Release</li>
         </ul>
@@ -37,6 +44,8 @@
   </releases>
   <url type="homepage">https://gitlab.com/JakobDev/jdAnimatedImageEditor</url>
   <url type="bugtracker">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/issues</url>
+  <url type="translate">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/blob/main/TRANSLATE.md</url>
+  <url type="contribute">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/blob/main/CONTRIBUTE.md</url>
   <categories>
     <category>Graphics</category>
     <category>Qt</category>
