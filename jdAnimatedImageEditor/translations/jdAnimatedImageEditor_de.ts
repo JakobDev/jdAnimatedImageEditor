@@ -372,7 +372,7 @@
     <message>
         <location filename="../SettingsDialog.ui" line="0"/>
         <source>Show in Window title if file is modified</source>
-        <translation>Zeige im Fenstertitel von eine Datei bearbeitet wurde</translation>
+        <translation>Zeige im Fenstertitel wenn eine Datei bearbeitet wurde</translation>
     </message>
     <message>
         <location filename="../SettingsDialog.ui" line="0"/>
