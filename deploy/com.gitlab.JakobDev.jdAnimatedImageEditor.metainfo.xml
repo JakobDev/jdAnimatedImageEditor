@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <component type="desktop">
-  <!--Created with jdAppdataEdit 3.3-->
+  <!--Created with jdAppdataEdit 4.0-->
   <id>com.gitlab.JakobDev.jdAnimatedImageEditor</id>
   <name>jdAnimatedImageEditor</name>
   <summary>A simple program for creating animated Images</summary>
@@ -23,21 +23,28 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.2" date="2022-07-05" type="stable">
+    <release version="1.3" date="2022-07-18" type="stable">
       <description>
+        <ul>
+          <li>Add Dutch translation</li>
+          <li>Images in the List are now movable</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2" date="2022-07-04" type="stable"><description>
         <ul>
           <li>Add Swedish translation</li>
           <li>Bugfixes</li>
         </ul>
       </description>
     </release>
-    <release version="1.1" date="2022-07-02" type="stable"><description>
+    <release version="1.1" date="2022-07-01" type="stable"><description>
         <ul>
           <li>Bugfixes</li>
         </ul>
       </description>
     </release>
-    <release version="1.0" date="2022-06-30" type="stable"><description>
+    <release version="1.0" date="2022-06-29" type="stable"><description>
         <ul>
           <li>First Release</li>
         </ul>
