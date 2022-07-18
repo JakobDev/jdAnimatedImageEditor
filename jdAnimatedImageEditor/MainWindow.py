@@ -53,6 +53,8 @@ class MainWindow(QMainWindow):
 
         self.image_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
 
+        self.image_table.verticalHeader().setSectionsMovable(True)
+
         self.new_action.triggered.connect(lambda: self._ask_for_save() and self._reset_all())
         self.open_action.triggered.connect(self._open_action_clicked)
         self.save_action.triggered.connect(self._save_action_clicked)
@@ -66,6 +68,8 @@ class MainWindow(QMainWindow):
 
         self.about_action.triggered.connect(self._about_dialog.exec)
         self.about_qt_action.triggered.connect(QApplication.instance().aboutQt)
+
+        self.image_table.verticalHeader().sectionMoved.connect(lambda: (self._update_preview(), self.set_modified(True)))
 
         self.image_add_file_button.clicked.connect(self._image_add_file_button_clicked)
         self.image_add_url_button.clicked.connect(self._image_add_url_button_clicked)
