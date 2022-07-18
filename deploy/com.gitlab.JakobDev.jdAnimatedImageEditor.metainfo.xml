@@ -5,6 +5,7 @@
   <name>jdAnimatedImageEditor</name>
   <summary>A simple program for creating animated Images</summary>
   <summary xml:lang="de">Ein einfaches Programm zum erstellen von animierten Bildern</summary>
+  <summary xml:lang="nl">Een eenvoudig programma om bewegende afbeeldingen mee te maken</summary>
   <summary xml:lang="sv">Ett enkelt program för att skapa animerade bilder</summary>
   <developer_name>JakobDev</developer_name>
   <launchable type="desktop-id">com.gitlab.JakobDev.jdAnimatedImageEditor.desktop</launchable>
@@ -13,6 +14,7 @@
   <description>
     <p>jdAnimatedImageEditor is a simple Programm that lets you create and edit animated Images. It supports GIF and APNG. Import and export of Videos is also supported.</p>
     <p xml:lang="de">jdAnimatedImageEditor ist ein einfaches Programm mit dem animierte Bilder erstellt und bearbeiten werden können. Es unterstützt GIF und APNG. Das importieren und exportieren von Videos wird auch unterstützt.</p>
+    <p xml:lang="nl">jdAnimatedImageEditor is een eenvoudig programma om bewegende afbeeldingen mee te maken. Er is ondersteuning voor gif- en apng-bestanden. Ook kunnen video's worden geïm- en geëxporteerd.</p>
     <p xml:lang="sv">jdAnimatedImageEditor är ett enkelt program som låter dig skapa och redigera animerade bilder. Det stöder GIF och APNG. Import och export av filmer stöds också.</p>
   </description>
   <screenshots>
