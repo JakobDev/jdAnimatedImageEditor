@@ -54,7 +54,7 @@
   <url type="homepage">https://gitlab.com/JakobDev/jdAnimatedImageEditor</url>
   <url type="bugtracker">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/issues</url>
   <url type="translate">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/blob/main/TRANSLATE.md</url>
-  <url type="contribute">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/blob/main/CONTRIBUTE.md</url>
+  <url type="contribute">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/blob/main/CONTRIBUTING.md</url>
   <categories>
     <category>Graphics</category>
     <category>Qt</category>
