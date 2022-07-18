@@ -1,4 +1,4 @@
-#!/usr/env python
+#!/usr/bin/env python
 from typing import Optional
 import subprocess
 import shutil
