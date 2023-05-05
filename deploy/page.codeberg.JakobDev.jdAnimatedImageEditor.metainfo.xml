@@ -14,7 +14,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>The Main Window</caption>
-      <image type="source">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/raw/1.0/Screenshots/MainWindow.png</image>
+      <image type="source">https://codeberg.org/JakobDev/jdAnimatedImageEditor/raw/commit/d9765caae4435d5c98ce807da2838fb14c0351a6/screenshots/MainWindow.png</image>
     </screenshot>
   </screenshots>
   <releases>
