@@ -1,5 +1,10 @@
 __pycache__/
+
+# Qt translations
 *.qm
+
+# Compiled UI files
+jdAnimatedImageEditor/ui_compiled
 
 #setup.py
 build/

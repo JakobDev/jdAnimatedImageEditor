@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "BuildBackend"
+backend-path = ["."]
+
+[project]
+name = "jdAnimatedImageEditor"
+description = "A simple program for creating animated Images"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["JakobDev", "PyQt6"]
+license = { text = "GPL-3" }
+authors = [
+    { name = "JakobDev", email = "jakobdev@gmx.de" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Environment :: Other Environment",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython"
+]
+dependencies = [
+  "PyQt6",
+  "requests",
+  "pillow"
+]
+dynamic = ["version"]
+
+[project.urls]
+Source = "https://codeberg.org/JakobDev/jdAnimatedImageEditor"
+Issues = "https://codeberg.org/JakobDev/jdAnimatedImageEditor/issues"
+Translate = "https://translate.codeberg.org/projects/jdAnimatedImageEditor"
+Donation = "https://ko-fi.com/jakobdev"
+
+[project.gui-scripts]
+jdanimatedimageeditor = "jdAnimatedImageEditor:main"
+
+[tool.setuptools.package-dir]
+jdAnimatedImageEditor = "jdAnimatedImageEditor"
+
+[tool.setuptools.dynamic]
+version = { file = "jdAnimatedImageEditor/version.txt" }

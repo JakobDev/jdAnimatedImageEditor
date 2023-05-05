@@ -1,18 +1,22 @@
 from PyQt6.QtCore import QTranslator, QLocale, QLibraryInfo
 from PyQt6.QtWidgets import QApplication
-from .MainWindow import MainWindow
 from .Environment import Environment
+from .MainWindow import MainWindow
 import PIL.Image
 import sys
 import os
 
 
 def main():
+    if not os.path.isdir(os.path.join(os.path.dirname(__file__), "ui_compiled")):
+        print("Could not find compiled ui files. Please run tools/CompileUI.py first.", file=sys.stderr)
+        sys.exit(1)
+
     app = QApplication(sys.argv)
 
     env = Environment()
 
-    app.setDesktopFileName("com.gitlab.JakobDev.jdAnimatedImageEditor")
+    app.setDesktopFileName("page.codeberg.JakobDev.jdAnimatedImageEditor")
     app.setApplicationName("jdAnimatedImageEditor")
     app.setWindowIcon(env.icon)
 

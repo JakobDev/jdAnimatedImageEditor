@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop">
+  <!--Created with jdAppStreamEdit 6.0-->
+  <id>page.codeberg.JakobDev.jdAnimatedImageEditor</id>
+  <name>jdAnimatedImageEditor</name>
+  <summary>A simple program for creating animated Images</summary>
+  <developer_name>JakobDev</developer_name>
+  <launchable type="desktop-id">page.codeberg.JakobDev.jdAnimatedImageEditor.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <description>
+    <p>jdAnimatedImageEditor is a simple Program that lets you create and edit animated Images. It supports GIF and APNG. Import and export of Videos is also supported.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>The Main Window</caption>
+      <image type="source">https://gitlab.com/JakobDev/jdAnimatedImageEditor/-/raw/1.0/Screenshots/MainWindow.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.3" date="2022-07-18" type="stable">
+      <description>
+        <ul>
+          <li>Add Dutch translation</li>
+          <li>Images in the List are now movable</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2" date="2022-07-04" type="stable">
+      <description>
+        <ul>
+          <li>Add Swedish translation</li>
+          <li>Bugfixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1" date="2022-07-01" type="stable">
+      <description>
+        <ul>
+          <li>Bugfixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0" date="2022-06-29" type="stable">
+      <description>
+        <ul>
+          <li>First Release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://codeberg.org/JakobDev/jdAnimatedImageEditor</url>
+  <url type="bugtracker">https://codeberg.org/JakobDev/jdAnimatedImageEditor/issues</url>
+  <url type="donation">https://ko-fi.com/jakobdev</url>
+  <url type="translate">https://translate.codeberg.org/projects/jdAnimatedImageEditor</url>
+  <categories>
+    <category>Graphics</category>
+    <category>Qt</category>
+  </categories>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <provides>
+    <binary>jdanimatedimageeditor</binary>
+    <python3>jdAnimatedImageEditor</python3>
+    <mediatype>image/gif</mediatype>
+    <mediatype>image/png</mediatype>
+  </provides>
+  <replaces>
+    <id>com.gitlab.JakobDev.jdAnimatedImageEditor</id>
+  </replaces>
+</component>

@@ -32,16 +32,16 @@ class Environment:
 
     def _get_data_path(self) -> str:
         if platform.system() == "Windows":
-            return os.path.join(os.getenv("APPDATA"), "jdAnimatedImageEditor")
+            return os.path.join(os.getenv("APPDATA"), "JakobDev", "jdAnimatedImageEditor")
         elif platform.system() == "Darwin":
-            return os.path.join(str(Path.home()), "Library", "Application Support", "jdAnimatedImageEditor")
+            return os.path.join(str(Path.home()), "Library", "Application Support", "JakobDev", "jdAnimatedImageEditor")
         elif platform.system() == "Haiku":
-            return os.path.join(str(Path.home()), "config", "settings", "jdAnimatedImageEditor")
+            return os.path.join(str(Path.home()), "config", "settings", "JakobDev", "jdAnimatedImageEditor")
         else:
             if os.getenv("XDG_DATA_HOME"):
-                return os.path.join(os.getenv("XDG_DATA_HOME"), "jdAnimatedImageEditor")
+                return os.path.join(os.getenv("XDG_DATA_HOME"), "JakobDev", "jdAnimatedImageEditor")
             else:
-                return os.path.join(str(Path.home()), ".local", "share", "jdAnimatedImageEditor")
+                return os.path.join(str(Path.home()), ".local", "share", "JakobDev", "jdAnimatedImageEditor")
 
     def save_recent_files(self):
         try:

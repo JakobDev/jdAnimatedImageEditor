@@ -1,12 +1,12 @@
 from .Functions import get_logical_table_row_list, clear_table_widget, get_url_from_clipboard, get_sender_table_row, get_pillow_file_extensions, get_qt_file_filter, get_temp_path
 from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFileDialog, QMessageBox, QInputDialog, QHeaderView
 from PyQt6.QtCore import QCoreApplication, QByteArray, QBuffer, QIODevice
+from .ui_compiled.MainWindow import Ui_MainWindow
 from PyQt6.QtGui import QPixmap, QMovie, QAction
+from typing import Optional, TYPE_CHECKING
 from .SettingsDialog import SettingsDialog
 from .AboutDialog import AboutDialog
-from typing import Optional
 import PIL.ImageSequence
-from PyQt6 import uic
 import PIL.ImageDraw
 import PIL.Image
 import traceback
@@ -15,6 +15,10 @@ import shutil
 import sys
 import io
 import os
+
+
+if TYPE_CHECKING:
+    from .Environment import Environment
 
 
 class ImageLabel(QLabel):
@@ -34,10 +38,11 @@ class ImageLabel(QLabel):
         return self._image.copy()
 
 
-class MainWindow(QMainWindow):
-    def __init__(self, env):
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self, env: "Environment"):
         super().__init__()
-        uic.loadUi(os.path.join(os.path.dirname(__file__), "MainWindow.ui"), self)
+
+        self.setupUi(self)
 
         self._env = env
         self._modified = False

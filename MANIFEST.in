@@ -1,4 +1,6 @@
-include jdAnimatedImageEditor/*.ui
-include jdAnimatedImageEditor/translations/*.qm
-include jdAnimatedImageEditor/version.txt
+include jdAnimatedImageEditor/translations/*.ts
+exclude jdAnimatedImageEditor/ui_compiled/*
 include jdAnimatedImageEditor/Icon.svg
+include jdAnimatedImageEditor/ui/*
+include BuildBackend.py
+exclude tools/*
