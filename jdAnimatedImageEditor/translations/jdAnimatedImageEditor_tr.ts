@@ -6,27 +6,27 @@
     <message>
         <location filename="../ui/AboutDialog.ui" line="0"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location filename="../ui/AboutDialog.ui" line="0"/>
         <source>A simple program for creating animated Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Animasyonlu Görüntüler oluşturmak için basit bir program</translation>
     </message>
     <message>
         <location filename="../ui/AboutDialog.ui" line="0"/>
         <source>This Program is licensed under GPL 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu Program, GPL 3 kapsamında lisanslanmıştır</translation>
     </message>
     <message>
         <location filename="../ui/AboutDialog.ui" line="0"/>
         <source>View source</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynağı görüntüle</translation>
     </message>
     <message>
         <location filename="../ui/AboutDialog.ui" line="0"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../Functions.py" line="64"/>
         <source>Can&apos;t parse JSON</source>
-        <translation type="unfinished"></translation>
+        <translation>JSON ayrıştırılamıyor</translation>
     </message>
     <message>
         <location filename="../Functions.py" line="64"/>
