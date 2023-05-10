@@ -8,18 +8,21 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-05 12:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-05-11 10:37+0000\n"
+"Last-Translator: Vistaus <vistausss@fastmail.com>\n"
+"Language-Team: Dutch <https://translate.codeberg.org/projects/"
+"jdAnimatedImageEditor/UnixMetadata/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #: deploy/page.codeberg.JakobDev.jdAnimatedImageEditor.metainfo.xml:6
 #: deploy/page.codeberg.JakobDev.jdAnimatedImageEditor.desktop:9
 msgid "A simple program for creating animated Images"
-msgstr ""
+msgstr "Een eenvoudig programma om bewegende afbeeldingen mee te maken"
 
 #: deploy/page.codeberg.JakobDev.jdAnimatedImageEditor.metainfo.xml:12
 msgid ""
@@ -27,7 +30,10 @@ msgid ""
 "animated Images. It supports GIF and APNG. Import and export of Videos is "
 "also supported."
 msgstr ""
+"jdAnimatedImageEditor is een eenvoudig programma om bewegende afbeeldingen "
+"mee te maken en te bewerken. Er is ondersteuning voor gif- en apng-"
+"bestanden. Im- en exporteren van video's is ook mogelijk."
 
 #: deploy/page.codeberg.JakobDev.jdAnimatedImageEditor.metainfo.xml:16
 msgid "The Mainwindow"
-msgstr ""
+msgstr "Hoofdvenster"
