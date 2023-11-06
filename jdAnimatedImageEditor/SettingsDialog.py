@@ -1,7 +1,7 @@
 from .Functions import select_combo_box_data, remove_list_duplicates, is_flatpak
 from .ui_compiled.SettingsDialog import Ui_SettingsDialog
-from PyQt6.QtCore import QCoreApplication, QLocale
 from PyQt6.QtWidgets import QDialog, QFileDialog
+from PyQt6.QtCore import Qt, QCoreApplication
 from .Languages import get_language_names
 from typing import TYPE_CHECKING
 from .Settings import Settings
@@ -25,7 +25,6 @@ class SettingsDialog(QDialog, Ui_SettingsDialog):
 
         found_translations = False
         language_names = get_language_names()
-        self.language_box.addItem(QCoreApplication.translate("SettingsDialog", "System language"), "default")
         self.language_box.addItem("English", "en")
         for i in os.listdir(os.path.join(env.program_dir, "translations")):
             if i.endswith(".qm"):
@@ -34,6 +33,8 @@ class SettingsDialog(QDialog, Ui_SettingsDialog):
                 found_translations = True
         if not found_translations:
              print("No compiled translations found. Please run tools/BuildTranslations to build the Translations.py.", file=sys.stderr)
+        self.language_box.model().sort(0, Qt.SortOrder.AscendingOrder)
+        self.language_box.insertItem(0, QCoreApplication.translate("SettingsDialog", "System language"), "default")
 
         self.window_title_box.addItem("jdAnimatedImageEditor", "programName")
         self.window_title_box.addItem(QCoreApplication.translate("SettingsDialog", "Filename") + " - jdAnimatedImageEditor", "fileName")

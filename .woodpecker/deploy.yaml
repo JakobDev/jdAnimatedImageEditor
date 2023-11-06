@@ -1,4 +1,8 @@
-pipeline:
+depends_on:
+    - freedesktop-check
+    - check-data-files
+
+steps:
     pip_deploy:
         image: python:latest
         commands:

@@ -8,6 +8,7 @@ from .SettingsDialog import SettingsDialog
 from .AboutDialog import AboutDialog
 import PIL.ImageSequence
 import PIL.ImageDraw
+import webbrowser
 import PIL.Image
 import traceback
 import requests
@@ -70,6 +71,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.export_video_action.triggered.connect(self._export_video_clicked)
 
         self.settings_action.triggered.connect(self._settings_dialog.open_dialog)
+
+        self.view_source_action.triggered.connect(lambda: webbrowser.open("https://codeberg.org/JakobDev/jdAnimatedImageEditor"))
+        self.report_bug_action.triggered.connect(lambda: webbrowser.open("https://codeberg.org/JakobDev/jdAnimatedImageEditor/issues"))
+        self.translate_action.triggered.connect(lambda: webbrowser.open("https://translate.codeberg.org/projects/jdAnimatedImageEditor"))
+        self.donate_action.triggered.connect(lambda: webbrowser.open("https://ko-fi.com/jakobdev"))
 
         self.about_action.triggered.connect(self._about_dialog.exec)
         self.about_qt_action.triggered.connect(QApplication.instance().aboutQt)

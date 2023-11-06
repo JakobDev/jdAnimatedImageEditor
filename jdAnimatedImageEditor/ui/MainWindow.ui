@@ -183,7 +183,7 @@
      <x>0</x>
      <y>0</y>
      <width>844</width>
-     <height>19</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -198,7 +198,8 @@
       <string>Recent Files</string>
      </property>
      <property name="icon">
-      <iconset theme="document-open-recent"/>
+      <iconset theme="document-open-recent">
+       <normaloff>.</normaloff>.</iconset>
      </property>
      <addaction name="actionPlaceholder"/>
     </widget>
@@ -222,6 +223,11 @@
     <property name="title">
      <string notr="true">?</string>
     </property>
+    <addaction name="view_source_action"/>
+    <addaction name="report_bug_action"/>
+    <addaction name="translate_action"/>
+    <addaction name="donate_action"/>
+    <addaction name="separator"/>
     <addaction name="about_action"/>
     <addaction name="about_qt_action"/>
    </widget>
@@ -240,7 +246,8 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="new_action">
    <property name="icon">
-    <iconset theme="document-new"/>
+    <iconset theme="document-new">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>New</string>
@@ -251,7 +258,8 @@
   </action>
   <action name="open_action">
    <property name="icon">
-    <iconset theme="document-open"/>
+    <iconset theme="document-open">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Open</string>
@@ -262,7 +270,8 @@
   </action>
   <action name="save_action">
    <property name="icon">
-    <iconset theme="document-save"/>
+    <iconset theme="document-save">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Save</string>
@@ -270,7 +279,8 @@
   </action>
   <action name="save_as_action">
    <property name="icon">
-    <iconset theme="document-save-as"/>
+    <iconset theme="document-save-as">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Save As...</string>
@@ -278,7 +288,8 @@
   </action>
   <action name="exit_action">
    <property name="icon">
-    <iconset theme="application-exit"/>
+    <iconset theme="application-exit">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
@@ -312,6 +323,26 @@
   <action name="export_video_action">
    <property name="text">
     <string>Export Video</string>
+   </property>
+  </action>
+  <action name="view_source_action">
+   <property name="text">
+    <string>View Source</string>
+   </property>
+  </action>
+  <action name="report_bug_action">
+   <property name="text">
+    <string>Report Bug</string>
+   </property>
+  </action>
+  <action name="translate_action">
+   <property name="text">
+    <string>Translate</string>
+   </property>
+  </action>
+  <action name="donate_action">
+   <property name="text">
+    <string>Donate</string>
    </property>
   </action>
  </widget>
