@@ -58,6 +58,8 @@ def main() -> None:
     for lang, translators in translator_dict.items():
         write_dict[lang] = sorted(list(set(translators)))
 
+    write_dict = dict(sorted(write_dict.items()))
+
     if args.stdout:
         print(json.dumps(write_dict, ensure_ascii=False, indent=4))
     else:
